@@ -51,7 +51,7 @@
 	<div class="container">
 	<div class="header-quote">“Happily ever after is not a fairy tale. It’s a choice.”</div>
 		<ul id="gn-menu" class="gn-menu-main">
-			<li class="gn-trigger">
+			<!--<li class="gn-trigger">
 				<div class="trigger"><a class="gn-icon gn-icon-menu"><span>Menu</span></a></div>
 				<nav class="gn-menu-wrapper">
 					<div class="gn-scroller">
@@ -75,9 +75,9 @@
 								</ul>
 							</li>
 						</ul>
-					</div><!--end gn-scroller-->
+					</div>
 				</nav>
-			</li>
+			</li>-->
 			<li class="back"><a class="gn-icon fa-angle-double-up" href="#top"></a></li>
 		</ul>
 	</div><!--end container-->
@@ -343,10 +343,10 @@ Filmy love stories are fictitious, but this real story is even more filmy.
             <div id="video_gallery">
 				<h3>The Happy Couple's Video Gallery</h3>
 				<div class="heart content-style"></div>
-                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/LXrzBol7E3k' frameborder='0' allowfullscreen></iframe></div><br>
-                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//lF0wBuVvItI' frameborder='0' allowfullscreen></iframe></div><br>
-                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//--DOLZzK7eM' frameborder='0' allowfullscreen></iframe></div><br>
-                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/SILrojVznC8' frameborder='0' allowfullscreen></iframe></div>
+                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: relative; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/LXrzBol7E3k' frameborder='0' allowfullscreen></iframe></div><br>
+                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: relative; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//lF0wBuVvItI' frameborder='0' allowfullscreen></iframe></div><br>
+                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: relative; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//--DOLZzK7eM' frameborder='0' allowfullscreen></iframe></div><br>
+                <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: relative; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/SILrojVznC8' frameborder='0' allowfullscreen></iframe></div>
             </div><!-- end video_gallery-->
 		</div><!-- end container-->
 	</div><!--end #about-->
@@ -682,7 +682,15 @@ jQuery('body').scrollspy({ target: '#gn-menu' });
 /*jshint -W031 */
 /*exported jQuery */
 
-
+//Tried this to close menu on clicking any item
+/*
+$('#gn-menu ul li')
+.css({cursor: "pointer"})
+.on('click', function(){
+  $(this).find('gn-menu').toggle();
+});
+*/
+    
 /* -- SLIDESHOW -- */
 $(function() {
 	cbpBGSlideshow.init();
